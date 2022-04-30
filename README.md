@@ -3,7 +3,7 @@
 ## **ABSTRACT**
 In today’s world, simply having the capacity to transfer a file from one location to another isn’t
 enough. Businesses today face multiple security threats and as a highly competitive environment,
-they need a secure file transfer system to protect and reliably transfer their sensitive, businesscritical data. SECURE FILE STORAGE is a method of data sharing via a secure, reliable delivery
+they need a secure file transfer system to protect and reliably transfer their sensitive, critical data. SECURE FILE STORAGE is a method of data sharing via a secure, reliable delivery
 method. Also, we use this between a client and a server. We use Cyber Security for securing
 information and communication in the presence of third parties. This technique is used to ensure
 that only those persons to whom the information is intended can read it. By using the principles
