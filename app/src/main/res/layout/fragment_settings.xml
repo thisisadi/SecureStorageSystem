@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.SettingsFragment">
+
+    <TextView
+        android:id="@+id/removeAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/color_settings_top"
+        android:text="Remove Account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/changePass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/color_settings_top"
+        android:text="Change Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/removeAccount"/>
+
+    <TextView
+        android:id="@+id/changeLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/color_settings_top"
+        android:text="Change Language"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changePass"/>
+
+    <TextView
+        android:id="@+id/upgradePlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/color_settings_top"
+        android:text="Upgrade Plan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changeLanguage"/>
+
+    <TextView
+        android:id="@+id/multipleAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/color_settings_top"
+        android:text="Multiple Account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upgradePlan"/>
+
+    <TextView
+        android:id="@+id/enableSync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Enable Sync"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multipleAccount"/>
+
+    <TextView
+        android:id="@+id/enable2Step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Enable 2 Step Verification"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enableSync"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchEnableSync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:trackTint="@color/color_switch"
+        app:layout_constraintTop_toBottomOf="@id/multipleAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="30dp"
+        />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchEnable2Step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:trackTint="@color/color_switch"
+        app:layout_constraintTop_toBottomOf="@id/switchEnableSync"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="30dp"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

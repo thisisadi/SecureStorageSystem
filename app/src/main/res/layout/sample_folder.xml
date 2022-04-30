@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="30dp"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/folderTop"
+            android:layout_width="71dp"
+            android:layout_height="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="22dp"
+            app:layout_constraintBottom_toTopOf="@id/folderBottom"
+            app:srcCompat="@drawable/folder_top_layer" />
+
+        <ImageView
+            android:id="@+id/folderBottom"
+            android:layout_width="77dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/folderTop"
+            android:layout_marginTop="-17dp"
+            app:srcCompat="@drawable/folder_bottom_layer" />
+
+        <ImageView
+            android:id="@+id/folderSettings"
+            android:layout_width="10dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/options"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/folderDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintTop_toBottomOf="@id/folderBottom"
+            app:layout_constraintStart_toStartOf="@id/folderBottom"
+            />
+
+        <TextView
+            android:id="@+id/folderCreationTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/folderDescription"
+            app:layout_constraintStart_toStartOf="@id/folderDescription"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

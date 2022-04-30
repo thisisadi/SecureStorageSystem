@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.StorageFragment">
+
+    <TextView
+        android:id="@+id/storageDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#22215B"
+        android:text="Storage Details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp">
+    </TextView>
+
+    <org.eazegraph.lib.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/storageDetails"
+        />
+
+    <TextView
+        android:id="@+id/Available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#22215B"
+        android:text="Available"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pieChart"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/storageAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#22215B"
+        android:text="5 GB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Available">
+    </TextView>
+
+    <TextView
+        android:id="@+id/storageTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total 1 GB"
+        android:textColor="#22215B"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/storageAvailable"></TextView>
+
+    <!-- PDF -->
+    <ImageView
+        android:id="@+id/key_pdf"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:srcCompat="@drawable/key_pdf"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/storageTotal"/>
+
+    <TextView
+        android:id="@+id/textPDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#22215B"
+        android:text="PDF Files"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/key_pdf"
+        app:layout_constraintTop_toBottomOf="@id/storageTotal">
+    </TextView>
+
+    <TextView
+        android:id="@+id/spacePDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="2.0 GB"
+        app:layout_constraintStart_toStartOf="@id/textPDF"
+        app:layout_constraintTop_toBottomOf="@id/textPDF">
+    </TextView>
+
+    <!-- Images -->
+
+    <ImageView
+        android:id="@+id/key_images"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:srcCompat="@drawable/key_images"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_pdf"
+         />
+
+    <TextView
+        android:id="@+id/textImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#22215B"
+        android:text="Image Files"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/key_images"
+        app:layout_constraintTop_toBottomOf="@id/spacePDF">
+    </TextView>
+
+    <TextView
+        android:id="@+id/spaceImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="1.5 GB"
+        app:layout_constraintStart_toStartOf="@id/textImages"
+        app:layout_constraintTop_toBottomOf="@id/textImages">
+    </TextView>
+
+    <!-- Text -->
+
+    <ImageView
+        android:id="@+id/key_txt"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:srcCompat="@drawable/key_txt"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_images" />
+
+    <TextView
+        android:id="@+id/textTXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#22215B"
+        android:text="Text Files"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/key_txt"
+        app:layout_constraintTop_toBottomOf="@id/spaceImages">
+    </TextView>
+
+    <TextView
+        android:id="@+id/spaceTXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="1.5 GB"
+        app:layout_constraintStart_toStartOf="@id/textTXT"
+        app:layout_constraintTop_toBottomOf="@id/textTXT">
+    </TextView>
+
+    <!-- Other Files -->
+
+    <ImageView
+        android:id="@+id/key_Others"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:tint="@color/teal_700"
+        app:srcCompat="@drawable/key_pdf"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_txt"/>
+
+    <TextView
+        android:id="@+id/textOthers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#22215B"
+        android:text="Other Files"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/key_Others"
+        app:layout_constraintTop_toBottomOf="@id/spaceTXT">
+    </TextView>
+
+    <TextView
+        android:id="@+id/spaceOthers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="2.0 GB"
+        app:layout_constraintStart_toStartOf="@id/textOthers"
+        app:layout_constraintTop_toBottomOf="@id/textOthers">
+    </TextView>
+
+    <!-- Available -->
+
+    <ImageView
+        android:id="@+id/key_available"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:srcCompat="@drawable/key_available"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_Others" />
+
+    <TextView
+        android:id="@+id/textAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#22215B"
+        android:text="Available"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/key_available"
+        app:layout_constraintTop_toBottomOf="@id/spaceOthers">
+    </TextView>
+
+    <TextView
+        android:id="@+id/spaceAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="5.0 GB"
+        app:layout_constraintStart_toStartOf="@id/textAvailable"
+        app:layout_constraintTop_toBottomOf="@id/textAvailable">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

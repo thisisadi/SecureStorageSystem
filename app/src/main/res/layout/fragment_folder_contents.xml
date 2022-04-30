@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.FolderContentsFragment">
+
+    <ImageView
+        android:id="@+id/contentsNavigateBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_pdf"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/contentsFolderTop"
+        android:layout_width="41dp"
+        android:layout_height="27dp"
+        android:src="@drawable/folder_top_layer"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintBottom_toTopOf="@id/contentsFolderBottom"/>
+
+    <ImageView
+        android:id="@+id/contentsFolderBottom"
+        android:layout_width="45dp"
+        android:layout_height="31dp"
+        android:src="@drawable/folder_bottom_layer"
+        app:layout_constraintTop_toBottomOf="@id/contentsFolderTop"
+        app:layout_constraintStart_toStartOf="@id/contentsFolderTop"
+        app:layout_constraintEnd_toEndOf="@id/contentsFolderTop"
+        android:layout_marginTop="-16dp"
+        android:layout_marginStart="1dp"/>
+
+    <TextView
+        android:id="@+id/contentsFolderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Folder"
+        android:textColor="@color/color_pdf"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/contentsFolderTop"
+        app:layout_constraintBottom_toBottomOf="@id/contentsFolderBottom"
+        app:layout_constraintStart_toEndOf="@id/contentsFolderBottom"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/contentsFolderCreationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/contentsFolderBottom"
+        app:layout_constraintEnd_toEndOf="@id/contentsFolderName"
+        app:layout_constraintTop_toBottomOf="@id/contentsFolderName"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/Uploads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploads"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_pdf"
+        app:layout_constraintTop_toBottomOf="@id/contentsNavigateBack"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contentsFolderRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Uploads"
+        app:layout_constraintBottom_toTopOf="@id/encryptAndUpload"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:id="@+id/displayNoFiles"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Uploads"
+        app:layout_constraintBottom_toTopOf="@id/encryptAndUpload"
+        android:visibility="invisible"
+        android:src="@drawable/no_files_bg">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/encryptAndUpload"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/encryptandupload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentsFolderRecyclerView"
+        tools:ignore="SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
